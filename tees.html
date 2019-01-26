@@ -27,6 +27,7 @@
     <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/lib/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/post.css" rel="stylesheet">
 </head>
 
     
@@ -210,61 +211,6 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="header-icon dib"><i class="ti-email"></i>
-                                    <div class="drop-down">
-                                        <div class="dropdown-content-heading">
-                                            <span class="text-left">2 New Messages</span>
-                                            <a href="email.html"><i class="ti-pencil-alt pull-right"></i></a>
-                                        </div>
-                                        <div class="dropdown-content-body">
-                                            <ul>
-                                                <li class="notification-unread">
-                                                    <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Michael Qin</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                                </li>
-                                                <li class="notification-unread">
-                                                    <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Mr. John</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Michael Qin</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Mr. John</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                                </li>
-                                                <li class="text-center">
-                                                    <a href="#" class="more-link">See All</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
                                 <li class="header-icon dib"><span class="user-avatar">John <i class="ti-angle-down f-s-10"></i></span>
                                     <div class="drop-down dropdown-profile">
                                         <div class="dropdown-content-heading">
@@ -293,38 +239,29 @@
 
 
 
-
     <div class="content-wrap">
         <div class="main">
             <div class="container-fluid">
                 <div class="row">
-                    
-                    
-                    <div id="1">
-    My Content 1
-                        
-<button id="btnClick">Click me!</button>
-</div>
-
-<div id="2" style="display:none;">
-    My Dynamic Content
-    
-<button id="btnClick">Click me!</button>
-</div>
-                    
-                    
-                                </div>
-                            </div>
-                            <!-- /# card -->
+                    <section>
+                        <div class="text sec" align="center">
+                            <img src="http://placehold.it/100/100"/>
+                            <textarea placeholder="What's in your mind"></textarea>
+                            <input type="submit" value="post"/>
                         </div>
-                        <!-- /# column -->
-                    </div>
+                    </section>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 
 
 
     <!-- jquery vendor -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="assets/js/lib/jquery.min.js"></script>
     <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
     <!-- nano scroller -->
@@ -339,15 +276,18 @@
     <!-- scripit init-->
 
     <script>
-        $('#btnClick').on('click',function(){
-    if($('#1').css('display')!='none'){
-    $('#2').html('Here is my dynamic content').show().siblings('div').hide();
-    }else if($('#2').css('display')!='none'){
-        $('#1').show().siblings('div').hide();
-    }
-});
-    </script>
-
+$(document).ready(function () {
+  $(".text").click(function () {
+    $(".overlay").fadeIn(500);
+  });
+  $(".overlay").not(".text").click(function() {
+    $(".overlay").fadeOut(500);
+  });
+  $("[type = submit]").click(function () {
+    var post = $("textarea").val();
+    $("<p class='post'>" + post + "</p>").appendTo("section");
+  });
+});    </script>
 
 
 </body>

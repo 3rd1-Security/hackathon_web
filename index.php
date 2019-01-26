@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,18 +26,9 @@
     <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
     <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
     <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-	
+	<link href="assets/css//home.css" rel="stylesheet">
     <link href="assets/css/lib/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <style type="text/css">
-        #cardnews{
-            background: #8e9eab;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-        }
-    </style>
 </head>
 
 <body>
@@ -48,16 +38,13 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Focus</span></a></div>
                     <ul>
-                        <li><a href="rural.html"><i class="ti-home"></i> Home</a></li>
-                        <li><a href="schemes.html"><i class="ti-bar-chart-alt"></i> Government Schemes</a></li>
-                        <li><a href="app-event-calender.html"><i class="ti-calendar"></i> NewsFeed </a></li>
-                        <li><a href="case.html"><i class="ti-calendar"></i> Case Study </a></li>
-                        <li><a href="app-profile.html"><i class="ti-user"></i> Proposed Schemes </a></li>
-                        <li><a href="#"><i class="ti-file"></i> Tutorials</a></li>
-                        <li><a href="#"><i class="ti-heart"></i> Case Study</a></li>
-                        <li><a href="#"><i class="ti-map"></i> LogIn</a></li>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-user"></i> Rural Entrepreneurship</a></li>
-                        <!--<li><a href="#"><i class="ti-layout-grid2-alt"></i> Log In</a></li>-->
+                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Home</a></li>
+                        <li><a href="schemes.php"><i class="ti-bar-chart-alt"></i> Government Schemes</a></li>
+                        <li><a href="proposeschemes.php"><i class="ti-bar-chart-alt"></i> Government Schemes</a></li>
+                        <li><a href="case.php"><i class="ti-calendar"></i> Case Study </a></li>
+                        <li><a href="tutorials.php"><i class="ti-email"></i> Tutorials</a></li>
+                        <li><a href="rural.php"><i class="ti-user"></i> Rural Entrepreneurship</a></li>
+                        <li><a href="#"><i class="ti-layout-grid2-alt"></i> Log In</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,10 +87,10 @@
                 <!-- /# row -->
                 <section id="main-content">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card nestable-cart" id="cardnews">
+                        <div class="col-lg-12" style="background: #a4b3fe;">
+                            <div class="card nestable-cart" style="background: url('assets/images/bgg.jpg'); ">
                                 <div class="card-title">
-                                    <span align="center" ><h2>Rural Entrepreneurship</h2></span>
+                                    <span align="center" ><h2>Why Entrepreneurship</h2></span>
                                     <h4>Entrepreneurs are frequently thought of as national assets to be cultivated, motivated and remunerated to the greatest possible extent. Entrepreneurs can change the way we live and work. If successful, their innovations may improve our standard of living, and in addition to creating wealth with their entrepreneurial ventures, they also create jobs and the conditions for a prosperous society.
 
 Entrepreneurs Create New Businesses

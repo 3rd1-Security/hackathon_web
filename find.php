@@ -54,10 +54,10 @@ p { padding-left: 10px; }
         <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
-                    <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Saksham Bharat</span></a></div>
+                    <div class="logo"><a href="index.php"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Saksham Bharat</span></a></div>
                     <ul>
-                        <li><a href="app-event-calender.html"><i class="ti-calendar"></i> NewsFeed </a></li>
-                        <li><a href="app-profile.html"><i class="ti-user"></i> Profile </a></li>
+                        <li><a href="app-event-calender.php"><i class="ti-calendar"></i> NewsFeed </a></li>
+                        <li><a href="app-profile.php"><i class="ti-user"></i> Profile </a></li>
                         <li class="active"><a><i class="ti-layout-grid2-alt"></i> Find Friends</a></li>
                         <li><a href="#"><i class="ti-file"></i> Tutorials</a></li>
                         <li><a href="#"><i class="ti-heart"></i> Case Study</a></li>

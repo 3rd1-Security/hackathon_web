@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -21,6 +22,9 @@
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 
     <!-- Styles -->
+    <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
+        
     <link href="assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
     <!--Themes Jquery Bar Rating-->
     <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
@@ -30,15 +34,15 @@
 	
     <link href="assets/css/lib/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    
     <style type="text/css">
-        #cardnews{
-            background: #8e9eab;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+        
+        .container-fluid{
+            margin-left: auto !important;
+            margin-right:auto !important;
         }
     </style>
+    
 </head>
 
 <body>
@@ -48,16 +52,12 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Focus</span></a></div>
                     <ul>
-                        <li><a href="rural.html"><i class="ti-home"></i> Home</a></li>
+                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Home</a></li>
                         <li><a href="schemes.html"><i class="ti-bar-chart-alt"></i> Government Schemes</a></li>
-                        <li><a href="app-event-calender.html"><i class="ti-calendar"></i> NewsFeed </a></li>
                         <li><a href="case.html"><i class="ti-calendar"></i> Case Study </a></li>
-                        <li><a href="app-profile.html"><i class="ti-user"></i> Proposed Schemes </a></li>
-                        <li><a href="#"><i class="ti-file"></i> Tutorials</a></li>
-                        <li><a href="#"><i class="ti-heart"></i> Case Study</a></li>
-                        <li><a href="#"><i class="ti-map"></i> LogIn</a></li>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-user"></i> Rural Entrepreneurship</a></li>
-                        <!--<li><a href="#"><i class="ti-layout-grid2-alt"></i> Log In</a></li>-->
+                        <li><a href="table-basic.html"><i class="ti-email"></i> Tutorials</a></li>
+                        <li><a href="rural.html"><i class="ti-user"></i> Rural Entrepreneurship</a></li>
+                        <li><a href="#"><i class="ti-layout-grid2-alt"></i> Log In</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,54 +86,20 @@
             </div>
         </div>
 
-
-
-
-    <div class="content-wrap">
-        <div class="main">
-            <div class="container-fluid">
-                <div class="row">
-					<div class="col-md-12" align="center">
-                        <h1>SakSham Bharat</h1>
-					</div>
-				</div>
-                <!-- /# row -->
-                <section id="main-content">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card nestable-cart" id="cardnews">
-                                <div class="card-title">
-                                    <span align="center" ><h2>Rural Entrepreneurship</h2></span>
-                                    <h4>Entrepreneurs are frequently thought of as national assets to be cultivated, motivated and remunerated to the greatest possible extent. Entrepreneurs can change the way we live and work. If successful, their innovations may improve our standard of living, and in addition to creating wealth with their entrepreneurial ventures, they also create jobs and the conditions for a prosperous society.
-
-Entrepreneurs Create New Businesses
-Trailblazing offerings by entrepreneurs, in the form of new goods and services, can produce a cascading effect by stimulating related businesses or sectors supporting the new venture, furthering economic development.
-
-For example, a few IT companies founded the Indian IT industry in the 1990s as a backend programmers' hub. Soon the industry gathered pace in its own programmers’ domain. But more importantly, millions from other sectors benefited from it. (For more, see: Top Indian Billionaires And How They Made Their Money.)
-
-Businesses in associated industries, like call center operations, network maintenance companies and hardware providers, flourished. Education and training institutes nurtured a new class of IT workers who were offered better, high-paying jobs. Infrastructure development organizations and even real estate companies capitalized on this growth as workers migrated to employment hubs seeking better lives.
-
-Similarly, future development efforts in underdeveloped countries will require robust logistics support, capital investment from buildings to paper clips, and a qualified workforce. From the highly qualified programmer to the construction worker, the entrepreneur benefits a large part of the economy.</h4>
-                                    <div class="card-title-right-icon">
-                                        <ul>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /# card -->
+        <div class='content-wrap'>
+            <div class='main'>
+                <div class='container-fluid'>
+                    <section id='main-content'>
+                        <div class='card-deck'>
                         </div>
-                        <!-- /# column -->
-                    </div>
-                    <!-- /# row -->
-
-
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
     </div>
-
-
+    
+        
+        
+        
 
     <div id="search">
         <button type="button" class="close">×</button>
@@ -191,6 +157,46 @@ Similarly, future development efforts in underdeveloped countries will require r
     <!-- scripit init-->
     <script src="assets/js/scripts.js"></script>
     <!-- scripit init-->
+    
+    <script type="text/javascript">
+    
+        $.get("scraping-APIs-master/proposedschemes.php", function(Data){
+            var array=JSON.parse(Data);
+            //console.log(array);
+            //console.log(array.data[1].head);
+            var len=Object.keys(array.data[1].head).length;
+            for(var i=0;i<len;++i){
+                //document.getElementsByClassName("card-img-top").src=array.data[i].img;
+                function a()
+                { 
+                
+                   var a1 = "<div class='card' style=width:50%><div class='card-body'><p><h5>";
+                    var b1=array.data[i].head;
+                    var b2="</h5></p>";
+                    var c2="<br><p>";
+                   var c3=array.data[i].text;
+                    var c4="</p></div></div>";
+
+                  var g; 
+
+                      g= document.createElement('div');
+                      g.id = i;
+                      $(".card-deck").after(g);
+                      var abc = a1+b1+b2+c2+c3+c4;
+                      document.getElementById(g.id).innerHTML=abc;         
+                 
+                }
+                a();
+
+                
+            }
+            
+        });
+    
+    
+    </script>
+            
+    
 </body>
 
 </html>
