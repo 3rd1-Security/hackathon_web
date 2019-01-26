@@ -32,10 +32,16 @@
         <link href="assets/css/lib/helper.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         
-        <link href="assets/css/feed.css" rel="stylesheet">
-        
         <!--scrollFeed-->
         <style type="text/css">
+            
+            
+        
+            #scrollFeed {
+            
+              max-height: 500px;
+              overflow-y: scroll;
+            }
             
             #feedBox{
                 height:500px;
@@ -47,87 +53,7 @@
                 position:sticky;
             }
         
-h3 {
-  margin-top: 30px;
-  font-size: 18px;
-  color: #555;
-}
-
-p { padding-left: 10px; }
-
-.btn {
-  box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
-  border-radius: 3px;
-  border: 1px solid;
-  display: inline-block;
-  height: 18px;
-  line-height: 18px;
-  padding: 0 8px;
-  position: relative;
-
-  font-size: 12px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-}
-       
-.btn-counter { margin-right: 39px; }
-.btn-counter:after,
-.btn-counter:hover:after { text-shadow: none; }
-.btn-counter:after {
-  border-radius: 3px;
-  border: 1px solid #d3d3d3;
-  background-color: #eee;
-  padding: 0 8px;
-  color: #777;
-  content: attr(data-count);
-  left: 100%;
-  margin-left: 8px;
-  margin-right: -13px;
-  position: absolute;
-  top: -1px;
-}
-.btn-counter:before {
-  transform: rotate(45deg);
-  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
-
-  background-color: #eee;
-  border: 1px solid #d3d3d3;
-  border-right: 0;
-  border-top: 0;
-  content: '';
-  position: absolute;
-  right: -13px;
-  top: 5px;
-  height: 6px;
-  width: 6px;
-  z-index: 1;
-  zoom: 1;
-}
-/*
- * Custom styles
- */
-.btn {
-  background-color: #dbdbdb;
-  border-color: #bbb;
-  color: #666;
-}
-.btn:hover,
-.btn.active {
-  text-shadow: 0 1px 0 #b12f27;
-  background-color: #373757;
-  border-color: #000;
-}
-.btn:active { box-shadow: 0 0 5px 3px rgba(0,0,0,0.2) inset; }
-.btn span { color: #373757; }
-.btn:hover, .btn:hover span,
-.btn.active, .btn.active span { color: #eeeeee; }
-.btn:active span {
-  color: #b12f27;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-}
-    </style>
-    
-        
+        </style>
         
     </head>
 
@@ -143,6 +69,8 @@ p { padding-left: 10px; }
                             <ul>
                                 <li><a href="index.html">Dashboard 1</a></li>
                                 <li><a href="index1.html">Dashboard 2</a></li>
+                                
+                                
                                 
                             </ul>
                         </li>
@@ -392,76 +320,84 @@ p { padding-left: 10px; }
         </div>
 
 
-        
         <div class="content-wrap">
             <div class="main">
                 <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 p-r-0 title-margin-right">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <h1>Hello, <span>Adarsh welcomes you..! </span></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# column -->
+                        <div class="col-lg-4 p-l-0 title-margin-left">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Home</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# column -->
+                    </div>
                     <!-- /# row -->
                     <section id="main-content">
                         
                         <!--delete here-->
                         <!-- /# row -->
 
-                        <div class="row">
+                        <nav id="scrollNav" class="navbar navbar-light bg-light">
+                                            <a class="nav-link" href="#morris-bar-chart"><h4 class="card-title">Sales Overview</h4></a>
+                                    </nav>
+                        <div class="row" id="scrollFeed">
                             <!-- column -->
-                        <div class="col-sm-8 float-left">
-                        
-                        <div class="card" >
+                            <div class="col-sm-8 float-left">
+                                <div class="card" >
                                     
-                        <div class="card-body" >
-                                        <!--
-                                        <div data-spy="scroll" data-target="#scrollNav" data-offset="0">-->
-                                            <!--<div id="morris-bar-chart"></div>
-                                            -->
-                            <div id="feeder">
-                            <div class="facebook-box">
-                            <div class="content">
-                                <div class="row header">
-                                    <div class="avatar">
-                                        <img src="http://placehold.it/40x40" alt="" />
-                                    </div>
-                                    <div class="name">
-                                        <h5><a href="http://khoipro.com" target="_blank">Adarsh</a></h5>
-                                        <span class="sub">10 October 2015 at 15:00</span>
+                                    <div class="card-body" >
+                                        
+                                        <div data-spy="scroll" data-target="#scrollNav" data-offset="0">
+                                            <div id="morris-bar-chart"></div>
+                                            <p>...
+                                  
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                          </p>
+                                            <p>...
+                                  
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                          </p>
+                                            <p>...
+                                  
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                          </p>
+                                            <p>...
+                                  
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                          </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row text">Sed tristique dapibus velit. Sed at mauris porttitor, aliquam erat eu, mollis quam. Morbi sit amet dignissim turpis. Proin sed dui nisl. Quisque lorem risus, cursus eget metus nec, lobortis varius massa.
-                                </div>
+                                
+                                
+                                
+                                
                             </div>
-                            <div class="footer">
-                                <div class="row text" style="margin: 0;">
-                                    <div class="col-lg-6">
-                                        <a href="#" title="Applaud" class="btn btn-counter" data-count="5"><span><i class="fa fa-thumbs-up"></i></span> Appreciate</a>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    <div class="float-right">
-                                        <a href="#" title="Love it" class="btn btn-counter" data-count="5"><span><i class="fa fa-comment"></i></span> Comment</a>
-                                    </div>
-                                    </div>
-                                <div class="col-lg-12" style="border-top: 1px solid #000">
-                                </div>
-                                </div>
-                                <div class="messag">
-                                <ul>
-                                <li class="contact">
-                                    <img class="small-avatar" src="http://placehold.it/32x32" alt="" />
-                                    <p>Hiiiii</p>
-                                </li>
-                                </ul>
-                                <div class="small-avatar">
-                                    <img src="http://placehold.it/32x32" alt="" />
-                                </div>
-                                <div class="write-comment">
-                                    <input type="text" placeholder="Write your comment...">
-                                    <button class="submit"></button>	
-                                </div>
-                                </div>
-                            </div>
-                                    
-                        </div>
-                        </div>
-                    </div>
-                </div>
                             <!-- column -->
                             <div class="col-sm-4">
                                 <div class="card text-center" id="feedBox">
@@ -478,97 +414,33 @@ p { padding-left: 10px; }
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
-                    </div>
+
+                        
+                        <!--delete-->                        
+
 
                         <!--delete-->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="footer">
+                                    <p>2018 © Admin Board. - <a href="#">example.com</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
         </div>
+        <div id="search">
+            <button type="button" class="close">×</button>
+            <form>
+                <input type="search" value="" placeholder="type keyword(s) here" />
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
         <!-- jquery vendor -->
-        
-        <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-        
-<script>
-/* 
- * Love button for Design it & Code it
- * http://designitcodeit.com/i/9
- */
-
-var catagories = new Array();
-var feeder = document.getElementById("feeder");
-    
- function caller()
- {
-    var div1 = document.createElement("div");
-    div1.setAttribute("class", "facdebook-box");
-    var div11 = facdebook-box.appendChild(div1);
-    div11.setAttribute("class", "content");
-    var div111 = content.appendChild(div11);
-    div111.setAttribute("class", "row header");
-     
-    var div121 = parent.appendChild(div11);
-    div121.setAttribute("class", "row text");
-     
-    var div12 = facdebook-box.appendChild(div1);
-    div11.setAttribute("class", "footer");
-    var div121 = footer.appendChild(div11);
-    div121.setAttribute("class", "row text");
-    
-    var div122 = footer.appendChild(div11);
-    div121.setAttribute("class", "messag");
-     
- }
-
- caller();
-    
-</script>
-<script>
-    
-            /* div.setAttribute("class", "col-sm-4 col-xs-6 filtr-item");
-			div.setAttribute("data-category", catag);
-			div.setAttribute("data-sort", "Luminous night");
-			parent.appendChild(div);
-            */
-    
-$('.btn-counter').on('click', function(event, count) {
-  event.preventDefault();
-  
-  var $this = $(this),
-      count = $this.attr('data-count'),
-      active = $this.hasClass('active'),
-      multiple = $this.hasClass('multiple-count');
-  
-  $.fn.noop = $.noop;
-  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
-  
-});
-    
-function newMessage() {
-	message = $(".write-comment input").val();
-	if($.trim(message) == '') {
-		return false;
-	}
-    $('<li><img class="small-avatar"src="http://placehold.it/32x32" alt="" /><p>' + message + '<p></li>').appendTo($('.messag ul'));
-	$('.write-comment input').val(null);
-	$('.contact.active .preview').html('<span>You: </span>' + message);
-	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-};
-
-$('.submit').click(function() {
-  newMessage();
-});
-
-$(window).on('keydown', function(e) {
-  if (e.which == 13) {
-    newMessage();
-    return false;
-  }
-});
-    
-    
-</script>
         <script src="assets/js/lib/jquery.min.js"></script>
         <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->

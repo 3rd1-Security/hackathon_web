@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -30,6 +31,25 @@
 	
     <link href="assets/css/lib/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    
+    <style type="text/css">
+        
+        .jumbotron{
+           
+            background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("background1.jpg");
+            background-size: cover;
+            min-height:500px;
+            
+        }
+        #mainCard{
+            background: rgba(204, 204, 204, 0.0);
+        }
+        #src{
+            height:400px;
+        }
+        
+    </style>
+    
 </head>
 
 <body>
@@ -39,10 +59,10 @@
                 <div class="nano-content">
                     <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Focus</span></a></div>
                     <ul>
-                        <li><a href="home.html"><i class="ti-home"></i> Home</a></li>
+                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Home</a></li>
                         <li><a href="schemes.html"><i class="ti-bar-chart-alt"></i> Government Schemes</a></li>
                         <li><a href="case.html"><i class="ti-calendar"></i> Case Study </a></li>
-                        <li class="active"><a class="sidebar-sub-toggle"><i class="ti-email"></i> Tutorials</a></li>
+                        <li><a href="table-basic.html"><i class="ti-email"></i> Tutorials</a></li>
                         <li><a href="rural.html"><i class="ti-user"></i> Rural Entrepreneurship</a></li>
                         <li><a href="#"><i class="ti-layout-grid2-alt"></i> Log In</a></li>
                     </ul>
@@ -74,53 +94,72 @@
         </div>
 
 
-
-
     <div class="content-wrap">
         <div class="main">
-            <div class="container-fluid">
-                <div class="row">
-					<div class="col-md-12" align="center">
-                        <h1>SakSham Bharat</h1>
-					</div>
-				</div>
-                <!-- /# row -->
-                <section id="main-content">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card nestable-cart">
-                                <div class="card-title">
-                                    <span align="center" ><h2>Tutorials</h2></span>
-                                    <h4>Entrepreneurs are frequently thought of as national assets to be cultivated, motivated and remunerated to the greatest possible extent. Entrepreneurs can change the way we live and work. If successful, their innovations may improve our standard of living, and in addition to creating wealth with their entrepreneurial ventures, they also create jobs and the conditions for a prosperous society.
-
-Entrepreneurs Create New Businesses
-Trailblazing offerings by entrepreneurs, in the form of new goods and services, can produce a cascading effect by stimulating related businesses or sectors supporting the new venture, furthering economic development.
-
-For example, a few IT companies founded the Indian IT industry in the 1990s as a backend programmers' hub. Soon the industry gathered pace in its own programmers’ domain. But more importantly, millions from other sectors benefited from it. (For more, see: Top Indian Billionaires And How They Made Their Money.)
-
-Businesses in associated industries, like call center operations, network maintenance companies and hardware providers, flourished. Education and training institutes nurtured a new class of IT workers who were offered better, high-paying jobs. Infrastructure development organizations and even real estate companies capitalized on this growth as workers migrated to employment hubs seeking better lives.
-
-Similarly, future development efforts in underdeveloped countries will require robust logistics support, capital investment from buildings to paper clips, and a qualified workforce. From the highly qualified programmer to the construction worker, the entrepreneur benefits a large part of the economy.</h4>
-                                    <div class="card-title-right-icon">
-                                        <ul>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /# card -->
-                        </div>
-                        <!-- /# column -->
-                    </div>
-                    <!-- /# row -->
-
-
-                </section>
-            </div>
-        </div>
+        <div class="container-fluid">
+        <section id="main-content">
+        <div class="jumbotron">
+    
+            <div class="row">
+                
+                <div class="col-sm-6">
+                    <!--div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="background.jpg" class="d-block w-100" alt="Crash">
     </div>
+    <div class="carousel-item">
+      <img src="background1.jpg" class="d-block w-100" alt="Crash">
+    </div>
+    <div class="carousel-item">
+      <img src="background.jpg" class="d-block w-100" alt="Crash">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div-->
+              </div>
+                
+              <div class="col-sm-6">
+                  <!--div class="container" id="main-topic">
+                      <p><h1 align="center">Skill India</h1></p>
+                  </div-->
+                  <div class="card" id="mainCard">
+                    <div class="card-body" >
+                        <h1 align="center">Skill India</h1>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+    
+        </div>
+            
+            <div class="row">
+                
+                <div class="col-sm-2">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSkillIndiaOfficial%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                   
+                </div>
+                <div class="col-sm-7"></div>
+                <div class="col-sm-3">
+                    <!--iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWorkStudiocowork%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe-->
+                    <iframe id="src"></iframe>
+                </div>
+            </div> 
+            
+        </section>
+        </div>
+        </div>
+        </div>
 
-
+        
 
     <div id="search">
         <button type="button" class="close">×</button>
@@ -178,6 +217,44 @@ Similarly, future development efforts in underdeveloped countries will require r
     <!-- scripit init-->
     <script src="assets/js/scripts.js"></script>
     <!-- scripit init-->
+    
+    <script type="text/javascript">
+    
+      var tweet=['https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSkillIndiaOfficial%2F&tabs=timeline&width=500&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media','https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWorkStudiocowork%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media'];
+        
+        //document.getElementById('src').src = tweet[1];
+        //alert(tweet[1]);
+        var d = new Date(); // for now
+        d.getHours(); // => 9
+        d.getMinutes(); // =>  30
+        d.getSeconds(); // => 51
+        var i=1;
+        /*if (!Date.now) {
+            Date.now = function() { return new Date().getTime(); }
+        }*/
+        if((d.getDay())%2==0){
+            document.getElementById('src').src = tweet[i];
+            i=(i+1)%tweet.length;    
+        }
+        
+        
+    </script>
+    <?php 
+            $t=time();
+            $t/=1000;
+            if($t%10>4){ ?>
+                <script type="text/javascript">
+                    console.log($t);
+                </script>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWorkStudiocowork%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    
+        <?php }else { ?>
+            
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSkillIndiaOfficial%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>    
+        <?php } ?>
+    
+    
+    
 </body>
 
 </html>
