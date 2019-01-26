@@ -69,7 +69,7 @@ p { padding-left: 10px; }
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
-        
+       
 .btn-counter { margin-right: 39px; }
 .btn-counter:after,
 .btn-counter:hover:after { text-shadow: none; }
@@ -404,59 +404,64 @@ p { padding-left: 10px; }
 
                         <div class="row">
                             <!-- column -->
-                            <div class="col-sm-8 float-left">
-                                <div class="card" >
+                        <div class="col-sm-8 float-left">
+                        
+                        <div class="card" >
                                     
-                                    <div class="card-body" >
+                        <div class="card-body" >
                                         <!--
                                         <div data-spy="scroll" data-target="#scrollNav" data-offset="0">-->
                                             <!--<div id="morris-bar-chart"></div>
                                             -->
-                    
-                                        <div class="facebook-box">
-    <div class="content">
-      <div class="row header">
-        <div class="avatar">
-          <img src="http://placehold.it/40x40" alt="" />
-        </div>
-        <div class="name">
-          <h5><a href="http://khoipro.com" target="_blank">Adarsh</a></h5>
-          <span class="sub">10 October 2015 at 15:00</span>
-        </div>
-      </div>
-      <div class="row text">
-Sed tristique dapibus velit. Sed at mauris porttitor, aliquam erat eu, mollis quam. Morbi sit amet dignissim turpis. Proin sed dui nisl. Quisque lorem risus, cursus eget metus nec, lobortis varius massa.
-      </div>
-  </div>
-  <div class="footer">
-    <div class="row text" style="margin: 0;">
-        <div class="col-lg-6">
-            <a href="#" title="Applaud" class="btn btn-counter" data-count="5"><span><i class="fa fa-thumbs-up"></i></span> Appreciate</a>
-        </div>
-        <div class="col-lg-6">
-            <div class="float-right">
-                <a href="#" title="Love it" class="btn btn-counter" data-count="5"><span><i class="fa fa-comment"></i></span> Comment</a>
-            </div>
-        </div>
-        <div class="col-lg-12" style="border-top: 1px solid #000">
-        </div>
-    </div>
-      <div class="small-avatar">
-        <img src="http://placehold.it/32x32" alt="" />
-      </div>
-      <div class="write-comment">
-        <input type="text" placeholder="Write your comment...">
-      </div>
-    </div>
-  </div>
-       
+                            <div id="feeder">
+                            <div class="facebook-box">
+                            <div class="content">
+                                <div class="row header">
+                                    <div class="avatar">
+                                        <img src="http://placehold.it/40x40" alt="" />
+                                    </div>
+                                    <div class="name">
+                                        <h5><a href="http://khoipro.com" target="_blank">Adarsh</a></h5>
+                                        <span class="sub">10 October 2015 at 15:00</span>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                
+                                <div class="row text">Sed tristique dapibus velit. Sed at mauris porttitor, aliquam erat eu, mollis quam. Morbi sit amet dignissim turpis. Proin sed dui nisl. Quisque lorem risus, cursus eget metus nec, lobortis varius massa.
+                                </div>
                             </div>
+                            <div class="footer">
+                                <div class="row text" style="margin: 0;">
+                                    <div class="col-lg-6">
+                                        <a href="#" title="Applaud" class="btn btn-counter" data-count="5"><span><i class="fa fa-thumbs-up"></i></span> Appreciate</a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <div class="float-right">
+                                        <a href="#" title="Love it" class="btn btn-counter" data-count="5"><span><i class="fa fa-comment"></i></span> Comment</a>
+                                    </div>
+                                    </div>
+                                <div class="col-lg-12" style="border-top: 1px solid #000">
+                                </div>
+                                </div>
+                                <div class="messag">
+                                <ul>
+                                <li class="contact">
+                                    <img class="small-avatar" src="http://placehold.it/32x32" alt="" />
+                                    <p>Hiiiii</p>
+                                </li>
+                                </ul>
+                                <div class="small-avatar">
+                                    <img src="http://placehold.it/32x32" alt="" />
+                                </div>
+                                <div class="write-comment">
+                                    <input type="text" placeholder="Write your comment...">
+                                    <button class="submit"></button>	
+                                </div>
+                                </div>
+                            </div>
+                                    
+                        </div>
+                        </div>
+                    </div>
+                </div>
                             <!-- column -->
                             <div class="col-sm-4">
                                 <div class="card text-center" id="feedBox">
@@ -473,8 +478,8 @@ Sed tristique dapibus velit. Sed at mauris porttitor, aliquam erat eu, mollis qu
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
+                    </div>
 
                         <!--delete-->
                     </section>
@@ -483,11 +488,50 @@ Sed tristique dapibus velit. Sed at mauris porttitor, aliquam erat eu, mollis qu
         </div>
         <!-- jquery vendor -->
         
+        <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        
 <script>
 /* 
  * Love button for Design it & Code it
  * http://designitcodeit.com/i/9
  */
+
+var catagories = new Array();
+var feeder = document.getElementById("feeder");
+    
+ function caller()
+ {
+    var div1 = document.createElement("div");
+    div1.setAttribute("class", "facdebook-box");
+    var div11 = facdebook-box.appendChild(div1);
+    div11.setAttribute("class", "content");
+    var div111 = content.appendChild(div11);
+    div111.setAttribute("class", "row header");
+     
+    var div121 = parent.appendChild(div11);
+    div121.setAttribute("class", "row text");
+     
+    var div12 = facdebook-box.appendChild(div1);
+    div11.setAttribute("class", "footer");
+    var div121 = footer.appendChild(div11);
+    div121.setAttribute("class", "row text");
+    
+    var div122 = footer.appendChild(div11);
+    div121.setAttribute("class", "messag");
+     
+ }
+
+ caller();
+    
+</script>
+<script>
+    
+            /* div.setAttribute("class", "col-sm-4 col-xs-6 filtr-item");
+			div.setAttribute("data-category", catag);
+			div.setAttribute("data-sort", "Luminous night");
+			parent.appendChild(div);
+            */
+    
 $('.btn-counter').on('click', function(event, count) {
   event.preventDefault();
   
@@ -500,6 +544,30 @@ $('.btn-counter').on('click', function(event, count) {
   $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
   
 });
+    
+function newMessage() {
+	message = $(".write-comment input").val();
+	if($.trim(message) == '') {
+		return false;
+	}
+    $('<li><img class="small-avatar"src="http://placehold.it/32x32" alt="" /><p>' + message + '<p></li>').appendTo($('.messag ul'));
+	$('.write-comment input').val(null);
+	$('.contact.active .preview').html('<span>You: </span>' + message);
+	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+};
+
+$('.submit').click(function() {
+  newMessage();
+});
+
+$(window).on('keydown', function(e) {
+  if (e.which == 13) {
+    newMessage();
+    return false;
+  }
+});
+    
+    
 </script>
         <script src="assets/js/lib/jquery.min.js"></script>
         <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
